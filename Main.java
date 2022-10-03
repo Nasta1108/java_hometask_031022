@@ -1,15 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        int[] array = {4,5,16,19,315};
+        int[] number1 = new int[]{22,102,33,69,85};
+        int[] number2 = new int[]{33,69,102,22,58};
 
-        int max = array[0];
-
-        for (int i : array){
-            if (i >max && i % 2 !=0){
-                max = i;
+        for (int i = 0; i < number1.length; i++)
+        {
+            int a = number1[i];
+            for (int j = 0; j < number2.length; j++)
+            {
+                if (a == number2[j])
+                {
+                    System.out.println("Number that repeat: " + a);
+                    break;
+                }
             }
         }
-
-        System.out.println("Max number is " + max);
     }
 }
